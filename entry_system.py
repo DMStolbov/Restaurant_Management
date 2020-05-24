@@ -18,15 +18,15 @@ def starting_menu(accounts):
 
 
 def determine_relevant_menu(role):
-    import menu
+    import specific_menus
     if role == 'manager':
-        menu.manager()
+        specific_menus.manager()
     elif role == 'cook':
-        menu.cook()
+        specific_menus.cook()
     elif role == 'waiter':
-        menu.waiter()
+        specific_menus.waiter()
     elif role == 'client':
-        menu.client()
+        specific_menus.client()
 
 
 def check_registered_users(file_name):

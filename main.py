@@ -1,7 +1,15 @@
-print("Hello my friends. I am Nastya")
+from entry_system import starting_menu, check_registered_users, authorization, users_role, determine_relevant_menu
+from entry_system import username, password
+# Getting information about existing users from a database.
+accounts = check_registered_users('users.txt')
 
-print("Yeah, Now I know how to use git!!!!AHAHAHAHAHHA")
+starting_menu(accounts)
 
-# Hi buddies, Dan here! How are you doing?
-# I'm testing how push works from PyCharm
+# Updating information about existing users after a possible registration.
+accounts = check_registered_users('users.txt')
 
+# Authorization
+print('You may log in now.')
+authorization(accounts)
+# Output - Menu for each user type (manager, cook, waiter and client).
+# We can develop these in menu.py

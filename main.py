@@ -1,5 +1,4 @@
-from entry_system import starting_menu, check_registered_users, authorization, users_role, determine_relevant_menu
-from entry_system import username, password
+from entry_system import starting_menu, check_registered_users, authorization
 # Getting information about existing users from a database.
 accounts = check_registered_users('users.txt')
 

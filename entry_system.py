@@ -1,8 +1,28 @@
+def symbols_are_valid(text):
+    if text == '':
+        print('Your input is empty.')
+        return False
+    prohibited_symbols = [' ', '\t']
+    for letter in text:
+        if letter in prohibited_symbols:
+            print('Do not use inappropriate symbols, please. (TAB, space)')
+            return False
+    return True
+
+
+def is_unique(accounts, username):
+    for account in accounts:
+        if account['username'] == username:
+            print(f'User {username} already exists.')
+            return False
+    return True
+
+
 def starting_menu(accounts):
     print('Hello! Please, authorize.\n'
-          'SIGN UP >>> input 1\n'
-          'SIGN IN >>> input 2\n'
-          'EXIT >>> input 3')
+          '1. Sign up (new client)\n'
+          '2. Sign in\n'
+          '3. EXIT')
     while True:
         choice = input()
         if choice == '1':
@@ -66,26 +86,6 @@ def authorization(accounts):
         authorization(accounts)
 
 
-def symbols_are_valid(text):
-    if text == '':
-        print('Your input is empty.')
-        return False
-    prohibited_symbols = [' ', '\t']
-    for letter in text:
-        if letter in prohibited_symbols:
-            print('Do not use inappropriate symbols, please. (TAB, space)')
-            return False
-    return True
-
-
-def is_unique(accounts, username):
-    for account in accounts:
-        if account['username'] == username:
-            print(f'User {username} already exists.')
-            return False
-    return True
-
-
 def registration(accounts):
     print('You may register now.')
     while True:
@@ -96,19 +96,9 @@ def registration(accounts):
         password = input('Password: ')
         if symbols_are_valid(password):
             break
-    available_roles = ['manager', 'cook', 'waiter', 'client']
-    while True:
-        role = input('Enter your role (manager, cook, waiter, client): ')
-        if role in available_roles:
-            break
-        else:
-            print('Incorrect role, please try again')
     print("You have successfully registered")
     database = open('users.txt', 'a')
-    database.write(f'\n{username}\t{password}\t{role}')
+    database.write(f'\n{username}\t{password}\tclient')
     database.close()
     accounts = info_from_database('users.txt')
     starting_menu(accounts)
-
-
-

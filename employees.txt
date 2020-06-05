@@ -1,0 +1,3 @@
+Peter Brown```manager```15000```12
+Charles Green```cook```5000```3
+Graham Stone```waiter```4500```8

@@ -1,4 +1,3 @@
 user1	password1	manager
 user2	password2	cook
 user3	password3	waiter
-user4	password4	client

@@ -1,0 +1,3 @@
+Table number: 1; number of people: 0; opened in 12:12:00; closed in 0
+Table number: 2; number of people: 4; opened in 12:12:00; closed in 18:12:00
+Table number: 2; number of people: 4; opened in 12:12:00; closed in 12:34:00

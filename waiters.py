@@ -24,10 +24,28 @@ class Table:
         global t
         nu = 0
         while nu < 1:
-            print("Enter the hours: ")
-            hours = int(input())
-            print("Enter the minutes: ")
-            minutes = int(input())
+            first = 0
+            while first < 1:
+                print("Enter the hours: ")
+                hours = input()
+                try:
+                    int(hours)
+                except ValueError:
+                    print("You should write just one integer number. Please, try again")
+                    continue
+                first += 1
+            hours = int(hours)
+            second = 0
+            while second < 1:
+                print("Enter the minutes: ")
+                minutes = input()
+                try:
+                    int(minutes)
+                except ValueError:
+                    print("You should write just one integer number. Please, try again")
+                    continue
+                second += 1
+            minutes = int(minutes)
             try:
                 t = datetime.time(hours, minutes)
             except ValueError:
@@ -41,10 +59,28 @@ class Table:
     def change_closing_hours(self):
         nu = 0
         while nu < 1:
-            print("Enter the hours: ")
-            hours = int(input())
-            print("Enter the minutes: ")
-            minutes = int(input())
+            first = 0
+            while first < 1:
+                print("Enter the hours: ")
+                hours = input()
+                try:
+                    int(hours)
+                except ValueError:
+                    print("You should write just one integer number. Please, try again")
+                    continue
+                first += 1
+            hours = int(hours)
+            second = 0
+            while second < 1:
+                print("Enter the minutes: ")
+                minutes = input()
+                try:
+                    int(minutes)
+                except ValueError:
+                    print("You should write just one integer number. Please, try again")
+                    continue
+                second += 1
+            minutes = int(minutes)
             try:
                 tim = datetime.time(hours, minutes)
             except ValueError:

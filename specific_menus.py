@@ -30,15 +30,23 @@ def cook():
 
 
 def waiter():
-    i = 0
     while True:
         print('Waiter menu')
-        print("Choose the option: Tables(1), Menu (2), Exit(3)")
-        ans = int(input())
+        first = 0
+        while first < 1:
+            print("Choose the option: Tables(1), Menu (2), Exit(3)")
+            ans = int(input())
+            try:
+                int(ans)
+            except ValueError:
+                print("You should write just one integer number. Please, try again")
+                continue
+            first += 1
+        ans = int(ans)
         if ans == 1:
             os.system("python waiters2.py")
         elif ans == 2:
-            print("Menu")
+            os.system("python dishes.py")
         elif ans == 3:
             break
         else:
@@ -46,4 +54,12 @@ def waiter():
 
 
 def client():
-    print('Client menu')
+    while True:
+        print('Client menu: Leave a comment(1), See the menu(2), Exit(3)')
+        ans = int(input())
+        if ans == 1:
+            os.system("python comments.py")
+        if ans == 2:
+            os.system("python dishes.py")
+        if ans == 3:
+            break

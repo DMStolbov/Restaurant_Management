@@ -54,4 +54,12 @@ def waiter():
 
 
 def client():
-    print('Client menu')
+    while True:
+        print('Client menu: Leave a comment(1), See the menu(2), Exit(3)')
+        ans = int(input())
+        if ans == 1:
+            os.system("python comments.py")
+        if ans == 2:
+            os.system("python dishes.py")
+        if ans == 3:
+            break

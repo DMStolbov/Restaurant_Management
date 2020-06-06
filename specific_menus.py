@@ -35,7 +35,7 @@ def waiter():
         first = 0
         while first < 1:
             print("Choose the option: Tables(1), Menu (2), Exit(3)")
-            ans = int(input())
+            ans = input()
             try:
                 int(ans)
             except ValueError:

@@ -3,18 +3,6 @@ from entry_system import *
 from tools import only_letters
 
 
-def warehouse_check():
-    print('Warehouse check\n')
-
-
-def order_foodstuffs():
-    print('Order foodstuffs')
-
-
-def box_office_check():
-    print('Box office check')
-
-
 def employee_list():
     print('Staff list:')
     staff = employee_info('employees.txt')
@@ -71,14 +59,3 @@ def hire_new_employee():
 
 def check_reviews():
     print('Check reviews')
-
-
-def only_letters(text):
-    if text == '':
-        print('Your input is empty.')
-        return False
-    allowed_symbols = list(' abcdefghijklmnopqrstuvwxyz') + list('абвгдеёжзийклмнопрстуфхцчшщъыьэюя')
-    for letter in text:
-        if letter.lower() not in allowed_symbols:
-            return False
-    return True

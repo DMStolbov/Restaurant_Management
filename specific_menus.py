@@ -1,24 +1,19 @@
 import manager_functions
 import os
 
+
 def manager():
     options = {
-        '1': manager_functions.warehouse_check,
-        '2': manager_functions.order_foodstuffs,
-        '3': manager_functions.box_office_check,
-        '4': manager_functions.employee_list,
-        '5': manager_functions.hire_new_employee,
-        '6': manager_functions.check_reviews,
-        '7': quit
+        '1': manager_functions.employee_list,
+        '2': manager_functions.hire_new_employee,
+        '3': manager_functions.check_reviews,
+        '4': quit
     }
     print('Manager menu\n'
-          '1. Check the warehouse\n'
-          '2. Order foodstuffs\n'
-          '3. Check the box office\n'
-          '4. Proceed to the list of employees\n'
-          '5. Hire a new employee >>>\n'
-          '6. Proceed to the list of reviews\n'
-          '7. EXIT\n')
+          '1. Proceed to the list of employees\n'
+          '2. Hire a new employee\n'
+          '3. Proceed to the list of reviews\n'
+          '4. EXIT\n')
     while True:
         choice = input('')
         if choice in options:
@@ -31,7 +26,7 @@ def manager():
 
 def cook():
     print('Cook menu')
-    
+    os.system("python cooks.py")
 
 
 def waiter():

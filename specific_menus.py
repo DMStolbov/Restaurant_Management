@@ -1,5 +1,5 @@
 import manager_functions
-
+import os
 
 def manager():
     options = {
@@ -31,10 +31,23 @@ def manager():
 
 def cook():
     print('Cook menu')
+    
 
 
 def waiter():
-    print('Waiter menu')
+    i = 0
+    while True:
+        print('Waiter menu')
+        print("Choose the option: Tables(1), Menu (2), Exit(3)")
+        ans = int(input())
+        if ans == 1:
+            os.system("python waiters2.py")
+        elif ans == 2:
+            print("Menu")
+        elif ans == 3:
+            break
+        else:
+            print("Try again")
 
 
 def client():

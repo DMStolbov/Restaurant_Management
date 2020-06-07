@@ -1,14 +1,16 @@
 from employees import *
 from entry_system import *
 from tools import only_letters
+from exchange_rate import RUB_to_USD
 
 
 def employee_list():
+    exchange_rate = RUB_to_USD()
     print('Staff list:\n')
     staff = employee_info('employees.txt')
     i = 1
     for emp in staff:
-        print(f'{i}.', emp.get_employee_info())
+        print(f'{i}.', emp.get_employee_info(exchange_rate))
         i += 1
 
 
@@ -26,7 +28,7 @@ def hire_new_employee():
         else:
             print('Enter an appropriate position, please.')
     while True:
-        salary = input('Salary: ')
+        salary = input('Salary in USD: ')
         try:
             int(salary)
             break

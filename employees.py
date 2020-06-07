@@ -5,9 +5,9 @@ class Employee:
         self.salary = salary
         self.experience = experience
 
-    def get_employee_info(self):
-        return f'Name: {self.fullname}, Position: {self.position}, Salary in $: {self.salary}, Experience in years: ' \
-               f'{self.experience}'
+    def get_employee_info(self, exchange_rate):
+        return f"Name: {self.fullname}\nPosition: {self.position}\nSalary in $: {self.salary}\n" \
+               f"Salary in ₽: {float(self.salary) * exchange_rate}\nExperience in years: {self.experience}\n"
 
 
 def employee_info(file_name):

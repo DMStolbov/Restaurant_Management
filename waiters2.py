@@ -1,6 +1,7 @@
 import datetime
 from draw_check import print_check
 
+
 class Table:
     def __init__(self, number, number_peop,  open, close, num_dishes, discount, money):
         self.number = number
@@ -13,7 +14,7 @@ class Table:
 
     def change_money(self, moneys):
         self.money = self.money + moneys
-        #self.money = without_disc - (without_disc*(self.discount/100))
+
 
     def count_the_final_bill(self):
         self.money = self.money - (self.money*((self.discount)/100))
@@ -21,6 +22,7 @@ class Table:
 
     def change_people(self, number_people):
         self.number_people = number_people
+
 
     def see_description(self):
         print(f"The table number {self.number},",
@@ -67,6 +69,7 @@ class Table:
         if self.open_hours.hour >= 12 and self.open_hours.hour <= 14:
             self.discount = 10
 
+
     def change_closing_hours(self):
         nu = 0
         while nu < 1:
@@ -108,7 +111,7 @@ class Table:
         self.discount = 0
         self.money = 0
 
-    def add_num_food(self, num_dishes1):   ### Number of dishes
+    def add_num_food(self, num_dishes1):
         self.num_dish = self.num_dish + num_dishes1
 
     def change_discount(self):
@@ -216,7 +219,6 @@ class Dishes:
         self.price = price
 
 
-
 with open("dishes.txt", 'r', encoding="utf-8") as f:
     number_dish = int(f.readline())
     i = 0
@@ -236,7 +238,6 @@ with open("dishes.txt", 'r', encoding="utf-8") as f:
         i += 1
 
 
-
 def write_into_tables(file):
     with open(file, "w", encoding="utf-8") as fi:
         fi.write('10\n')
@@ -251,8 +252,6 @@ def write_into_tables(file):
 
 
 def changes_in_tables(file, numb):
-    # print("numb: ", numb)
-    # print(tables[numb-1].number)
     with open(file, "a", encoding="utf-8") as fili:
         fili.write('Table number: {}; number of people: {}; opened in {}; '
                    'closed in {}; bill: {}\n'.format(tables[numb-1].number,
@@ -274,10 +273,10 @@ def for_money():
         money = float(f.readline())
     return money
 
+
 def write_tab(money):
     with open("money.txt", 'w', encoding="utf-8") as f:
         f.write(str(money))
-
 
 
 def all_money(moneys, money_table):
@@ -296,7 +295,7 @@ for l in range(number_dish):
 
 
 while True:
-    print("Enter the number of the table you want to choose.If you want to exit, enter: Exit ")
+    print("Enter the number of the table you want to choose. If you want to exit, enter: Exit ")
     x = input()
     list_n = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     if x in list_n:
@@ -308,8 +307,8 @@ while True:
                     print(f"What do you want to choose (Table № {tables[i].number})\n"
                           "See the basic information about table (1)\n"
                           "Change the number of people (2)\n"
-                          "Change the open hours (3)\n"
-                          "Change the closed hours (4)\n"
+                          "Set the starting time (3)\n"
+                          "Set the closing time (4)\n"
                           "Add dishes (5)\n"
                           "Look at dishes (6)\n"
                           "Additional discounts (7)\n"
@@ -332,17 +331,17 @@ while True:
                         print("How many people?")
                         num_pep = int(input())
                         tables[i].change_people(num_pep)
-                        #ch1 = changes_in_tables('changes.txt', tables[i].number)
+
                         print("The information has ben changed")
                         back2 = back_option()
                     elif ans == 3:
                         tables[i].change_open_hours()
-                        #ch2 = changes_in_tables('changes.txt', tables[i].number)
+
                         print("The information has ben changed")
                         back3 = back_option()
                     elif ans == 4:
                         tables[i].change_closing_hours()
-                        #ch3 = changes_in_tables('changes.txt', tables[i].number)
+
                         print("The information has ben changed")
                         #print(tables[i].close_hours.hour)
                         back4 = back_option()
@@ -379,9 +378,9 @@ while True:
                                     continue
                             num1 += 1
 
-                        tables[i].add_num_food(num_food)   #????
+                        tables[i].add_num_food(num_food)
 
-                        #foods[i].add_dishes(num_food)
+
                         print("The information has ben changed")
                         back6 = back_option()
                     elif ans == 6:

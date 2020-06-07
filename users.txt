@@ -5,6 +5,3 @@ graham_stone	GStone111	waiter
 steven_williams	SWilliams111	waiter
 jack_wilson	JWilson111	waiter
 stupendous_chef	SChef111	cook
-user999	qwerty111	client
-charles_browney	CBrowney	waiter
-Anastasia	Calculus	client

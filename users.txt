@@ -1,4 +1,7 @@
 user1	password1	manager
 user2	password2	cook
-user3	password3	waiter
-Petr	123456	client
+user3	password3	client
+graham_stone	GStone111	waiter
+steven_williams	SWilliams111	waiter
+jack_wilson	JWilson111	waiter
+stupendous_chef	SChef	cook

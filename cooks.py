@@ -11,6 +11,7 @@ def grocery(goods_dict):
         else:
             print("I don't understand what you're talking about, try again .")
 
+
 class cooks:
     def __init__(self, name, evaluation, salaries, persona):
         self.name = name
@@ -58,6 +59,7 @@ def show_cooks(special_list):
                 print(special_list[2].persona)
         else:
             print("I don't understand what you're talking about, try again .")
+
 
 def see_persona(cooks):
     print(cooks.persona)

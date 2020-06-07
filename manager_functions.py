@@ -4,10 +4,11 @@ from tools import only_letters
 
 
 def employee_list():
-    print('Staff list:')
+    print('Staff list:\n')
     staff = employee_info('employees.txt')
+    i = 1
     for emp in staff:
-        print(emp.get_employee_info())
+        print(f'{i}.', emp.get_employee_info())
 
 
 def hire_new_employee():
@@ -58,4 +59,15 @@ def hire_new_employee():
 
 
 def check_reviews():
-    print('Check reviews')
+    print('Reviews list:\n\n')
+    reviews = open('reviews.txt', 'r')
+    data = reviews.read().split('\n')
+    reviews.close()
+    reviews = []
+    for review in data:
+        attribute = review.split('--')
+        reviews.append(attribute)
+    i = 1
+    for review in reviews:
+        print(f'{i}. Waiter: {review[0]}\nEvaluation:{review[1]}\nClient comments: {review[2]}\n')
+        i += 1

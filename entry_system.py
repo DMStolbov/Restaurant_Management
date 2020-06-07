@@ -68,7 +68,7 @@ def authorization(accounts):
     password_matches = False
     for account in accounts:
         if username == account['username'] and password == account['password']:
-            print(f'Hello, {username.title()}! You logged in successfully. You are a {account["role"]}.')
+            print(f'Hello, {username.title()}! You logged in successfully. You are a {account["role"]}.\n')
             determine_relevant_menu(account["role"])
             password_matches = True
             user_exists = True

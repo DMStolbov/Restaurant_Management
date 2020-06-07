@@ -6,7 +6,7 @@ class Employee:
         self.experience = experience
 
     def get_employee_info(self):
-        return f'Name: {self.fullname}, Position: {self.position}, Salary in $: {self.salary}, Experience in years:' \
+        return f'Name: {self.fullname}, Position: {self.position}, Salary in $: {self.salary}, Experience in years: ' \
                f'{self.experience}'
 
 

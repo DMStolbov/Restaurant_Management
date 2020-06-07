@@ -1,3 +1,6 @@
 Peter Brown```manager```15000```12
 Charles Green```cook```5000```3
 Graham Stone```waiter```4500```8
+Steven Williams```waiter```3000```1
+Jack Wilson```waiter```4100```3
+Stupendous Chef```cook```20000```20

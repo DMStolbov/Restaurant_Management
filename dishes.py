@@ -45,7 +45,7 @@ def show_menu(num_dishes):
             break
         elif xx == "Yes":
             while True:
-                print("Enter the name of a dish: / Exit")
+                print("Enter the name of a dish:")
                 user = input()
                 if user in new_names:
                     break

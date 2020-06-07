@@ -112,14 +112,21 @@ class Table:
         self.num_dish = self.num_dish + num_dishes1
 
     def change_discount(self):
-        print("If there are additional discounts?: Yes/ No")
+        print("Are there additional discounts?: Yes/ No")
         while True:
             user = input()
             if user != "No" and user != "Yes":
                 print("Try again")
                 continue
             if user == "Yes":
-                disc = int(input("Birthday (1); Wedding (2)\n"))
+                while True:
+                    disc = input("Birthday (1); Wedding (2)\n")
+                    if disc in ["1","2"]:
+                        break
+                    else:
+                        print("Try again")
+                        continue
+                disc = int(disc)
                 if disc == 1:
                     if self.discount == 0:
                         self.discount = 5
@@ -294,7 +301,14 @@ while True:
                           "Clear everything (8)\n"
                           "Print the check (All info will be nullified) (9)\n"
                           "Back (10)")
-                    ans = int(input())
+                    while True:
+                        ans =input()
+                        if ans in list_n:
+                            break
+                        else:
+                            print("There is no such option. Try again")
+                            continue
+                    ans = int(ans)
                     if ans == 1:
                         print("The basic description: ")
                         tables[i].see_description()

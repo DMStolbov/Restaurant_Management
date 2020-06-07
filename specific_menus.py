@@ -7,13 +7,15 @@ def manager():
         '1': manager_functions.employee_list,
         '2': manager_functions.hire_new_employee,
         '3': manager_functions.check_reviews,
-        '4': quit
+        '4': manager_functions.check_comments,
+        '5': quit
     }
     print('Manager menu\n'
           '1. Proceed to the list of employees\n'
           '2. Hire a new employee\n'
-          '3. Proceed to the list of reviews\n'
-          '4. EXIT\n')
+          '3. Proceed to the list of reviews on waiters\n'
+          '4. Proceed to the list of comments about the restaurant\n'
+          '5. EXIT\n')
     while True:
         choice = input('')
         if choice in options:

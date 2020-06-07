@@ -74,3 +74,14 @@ def check_reviews():
     for review in reviews:
         print(f'{i}. Waiter: {review[0]}\nEvaluation: {review[1]}\nClient comments: {review[2]}\n')
         i += 1
+
+
+def check_comments():
+    print('Comments list:\n\n')
+    comments = open('comments.txt', 'r')
+    data = comments.read().split('\n')
+    comments.close()
+    i = 1
+    for comment in data:
+        print(f'{i}. {comment}\n')
+        i += 1

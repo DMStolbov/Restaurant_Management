@@ -9,6 +9,7 @@ def employee_list():
     i = 1
     for emp in staff:
         print(f'{i}.', emp.get_employee_info())
+        i += 1
 
 
 def hire_new_employee():
@@ -69,5 +70,5 @@ def check_reviews():
         reviews.append(attribute)
     i = 1
     for review in reviews:
-        print(f'{i}. Waiter: {review[0]}\nEvaluation:{review[1]}\nClient comments: {review[2]}\n')
+        print(f'{i}. Waiter: {review[0]}\nEvaluation: {review[1]}\nClient comments: {review[2]}\n')
         i += 1

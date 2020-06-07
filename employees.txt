@@ -4,3 +4,4 @@ Graham Stone```waiter```4500```8
 Steven Williams```waiter```3000```1
 Jack Wilson```waiter```4100```3
 Stupendous Chef```cook```20000```20
+Charles Browney```waiter```3000```2

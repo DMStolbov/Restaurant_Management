@@ -13,6 +13,7 @@ def employee_info(file_name):
         staff.append(employee)
     return staff
 
+
 def see_names(staff_name):
     print("These are our waiters:")
     for i in range(len(staff_name)):
@@ -33,6 +34,7 @@ def waiter(staff_name):
             continue
     return ans
 
+
 def evaluate():
     print("Rate him: from 0 to 10 (0 - very bad, 10 - perfect)")
     while True:
@@ -50,10 +52,10 @@ def write_comment():
     ans = input()
     return ans
 
+
 def write_file(waiter, rate, comment, file_name):
     with open(file_name, 'a', encoding="utf-8") as f:
-        f.write(f'{waiter}--{rate}--{comment}\n')
-
+        f.write(f'\n{waiter}--{rate}--{comment}')
 
 
 staff = employee_info('employees.txt')

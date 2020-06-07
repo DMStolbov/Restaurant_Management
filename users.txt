@@ -7,3 +7,4 @@ jack_wilson	JWilson111	waiter
 stupendous_chef	SChef	cook
 user999	qwerty111	client
 charles_browney	CBrowney	waiter
+Anastasia	Calculus	client

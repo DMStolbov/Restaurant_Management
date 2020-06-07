@@ -57,8 +57,18 @@ def waiter():
 
 def client():
     while True:
-        print('Client menu: See the menu(1), Leave a comment(2), Rate the waiter(3), Exit(4)')
-        ans = int(input())
+        #print('Client menu: See the menu(1), Leave a comment(2), Rate the waiter(3), Exit(4)')
+        first = 0
+        while first < 1:
+            print('Client menu: See the menu(1), Leave a comment(2), Rate the waiter(3), Exit(4)')
+            ans = input()
+            try:
+                int(ans)
+            except ValueError:
+                print("You should write just one integer number. Please, try again")
+                continue
+            first += 1
+        ans = int(ans)
         if ans == 2:
             os.system("python comments.py")
         elif ans == 1:
@@ -68,3 +78,6 @@ def client():
             print("Thanks!")
         elif ans == 4:
             break
+        else:
+            print("There is no such option")
+            continue

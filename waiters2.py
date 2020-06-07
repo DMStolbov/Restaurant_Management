@@ -269,6 +269,21 @@ def back_option():
             break
 
 
+def for_money():
+    with open("money.txt", 'r', encoding="utf-8") as f:
+        money = float(f.readline())
+    return money
+
+def write_tab(money):
+    with open("money.txt", 'w', encoding="utf-8") as f:
+        f.write(str(money))
+
+
+
+def all_money(moneys, money_table):
+    money = moneys + money_table
+    return money
+
 
 tables_and_food = create_list_Table("tables.txt")
 tables = tables_and_food[0]
@@ -384,6 +399,9 @@ while True:
                     elif ans == 9:
                         tables[i].count_the_final_bill()
                         ch1 = changes_in_tables('changes.txt', tables[i].number)
+                        money_l = for_money()
+                        mon = all_money(money_l, tables[i].money)
+                        mone = write_tab(mon)
                         x = print_check(tables[i].number_people, tables[i].open_hours, tables[i].close_hours,
                                                 tables[i].discount, foods[i].food, tables[i].money)
                         tables[i].clear_data()

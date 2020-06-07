@@ -2,3 +2,4 @@ Table number: 1; number of people: 2; opened in 16:18:00; closed in 0; bill: 562
 Table number: 1; number of people: 12; opened in 12:12:00; closed in 16:16:00; bill: 503.1
 Table number: 1; number of people: 0; opened in 0; closed in 0; bill: 0.0
 Table number: 1; number of people: 0; opened in 0; closed in 0; bill: 0.0
+Table number: 1; number of people: 14; opened in 12:13:00; closed in 16:18:00; bill: 588.6

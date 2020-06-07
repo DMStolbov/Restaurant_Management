@@ -1,5 +1,5 @@
 10
-Baked Potato,200,691,8
+Baked Potato,2,691,8
 Potato,4
 Sunflower oil,1
 Red onions,2
@@ -8,7 +8,7 @@ Tomato,2
 Black beans,1
 Cheese,1
 Beef,2
-Mexican chicken burger,250,709,7
+Mexican chicken burger,3,709,7
 Chicken,3
 Bread,2
 Lime,1
@@ -16,7 +16,7 @@ Cheesse,2
 Avocado,1
 Cherry tomato,2
 Brioche bun,2
-Green burger,150,233,7
+Green burger,2,233,7
 Olive oil,1
 Onion,1
 Spinach,1
@@ -24,13 +24,13 @@ Bread,2
 Cheddar,2
 Parmesan,2
 Egg,1
-Herby Persian frittata,100,198,5
+Herby Persian frittata,1,198,5
 Egg,2
 Baking powder,3
 Turmeric,1
 Coriander,2
 Onion,2
-Lasagne,300,794,10
+Lasagne,4,794,10
 Olive oil,1
 Celery,1
 Onion,2
@@ -41,7 +41,7 @@ Milk,3
 Tomato,2
 Red wine,1
 Pasta sheets,5
-Green Spaghetti & Meatballs,350,720,7
+Green Spaghetti & Meatballs,4,720,7
 Pork,3
 Apple,1
 Oil,1
@@ -49,17 +49,17 @@ Spaghetti,4
 Spinach,2
 Avocado,1
 Parmesan,2
-Omelette,100,277,3
+Omelette,1,277,3
 Egg,3
 Sunflower oil,1
 Butter,1
-Tuna Pasta,300,752,5
+Tuna Pasta,4,752,5
 Rigatoni,2
 Butter,1
 Plain flour,2
 Milk,2
 Cheddar,2
-Pizza Margherita,395,693,7
+Pizza Margherita,5,693,7
 Flour,2
 Tomatoes,2
 Olive oil,2
@@ -67,7 +67,7 @@ Oregano,1
 Basil,2
 Parmesan,2
 Mozzarella,2
-Sourdough Pizza,259,502,5
+Sourdough Pizza,2,502,5
 Flour,2
 Tomatoes,3
 Oregano,1

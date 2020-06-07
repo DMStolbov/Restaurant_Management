@@ -85,3 +85,12 @@ def check_comments():
     for comment in data:
         print(f'{i}. {comment}\n')
         i += 1
+
+
+def check_the_box_office():
+    exchange_rate = RUB_to_USD()
+    data = open('money.txt', 'r')
+    cash = float(data.read())
+    data.close()
+    print(f'Cashier whispers: "There is {cash}$ in the box office. It is equal to {cash*exchange_rate}₽."')
+
